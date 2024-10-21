@@ -18,6 +18,32 @@ Tired of hunting for emails in messy files? 🕵️‍♂️ Fear not! Welcome t
 2. **Step 2:** Hit the magic button 🧙‍♂️.
 3. **Step 3:** Download your beautiful, organized email list like a boss 🚀.
 
+```
+├── email_extractor/
+│   ├── requirements.txt
+│   ├── db.sqlite3
+│   ├── README.md
+│   ├── .env
+│   ├── manage.py
+│   ├── extractor/
+│   │   ├── models.py
+│   │   ├── apps.py
+│   │   ├── forms.py
+│   │   ├── admin.py
+│   │   ├── tests.py
+│   │   ├── urls.py
+│   │   └── views.py
+│   │   ├── templates/
+│   │   │   ├── extractor/
+│   │   │   │   ├── results.html
+│   │   │   │   └── upload.html
+│   ├── email_extractor/
+│   │   ├── asgi.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   └── wsgi.py
+```
+
 ## Installation Instructions ⚙️
 
 Clone the repo.
