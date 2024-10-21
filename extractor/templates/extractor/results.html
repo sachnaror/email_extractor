@@ -1,0 +1,21 @@
+<h2>Extracted Emails</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Email Addresses</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for email in emails %}
+        <tr>
+            <td>{{ email }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<!-- Links to download the results -->
+<a href="{% url 'download_txt' %}?emails={{ emails|join:"," }}">Download as .txt</a> |
+<a href="{% url 'download_csv' %}?emails={{ emails|join:"," }}">Download as .csv</a> |
+<a href="{% url 'download_xls' %}?emails={{ emails|join:"," }}">Download as .xls</a>
