@@ -3,6 +3,8 @@
 <a href="{% url 'download_txt' %}?emails={{ emails|join:"," }}">Download as .txt</a> |
 <a href="{% url 'download_csv' %}?emails={{ emails|join:"," }}">Download as .csv</a> |
 <a href="{% url 'download_xls' %}?emails={{ emails|join:"," }}">Download as .xls</a>
+<br>
+<br>
 <table>
     <tbody>
         {% for email in emails %}
@@ -13,7 +15,3 @@
     </tbody>
 </table>
 
-<!-- Links to download the results -->
-<a href="{% url 'download_txt' %}?emails={{ emails|join:"," }}">Download as .txt</a> |
-<a href="{% url 'download_csv' %}?emails={{ emails|join:"," }}">Download as .csv</a> |
-<a href="{% url 'download_xls' %}?emails={{ emails|join:"," }}">Download as .xls</a>
