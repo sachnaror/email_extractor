@@ -1,0 +1,22 @@
+name: Update Repo Description
+
+on:
+  push:
+    paths:
+      - 'DESCRIPTION.md'  # Trigger action when DESCRIPTION.md is updated
+
+jobs:
+  update-description:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set description from DESCRIPTION.md
+        run: |
+          DESCRIPTION=$(cat DESCRIPTION.md | head -n 3)  # Take the first 3 lines
+          curl -X PATCH \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -d "{\"description\": \"$DESCRIPTION\"}" \
+            https://api.github.com/repos/${{ github.repository }}
