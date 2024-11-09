@@ -1,3 +1,1 @@
-Python-based tool to clean and extract email addresses from unstructured files.
-Removes clutter and isolates emails in a clean, single-column list.
-Optimized for efficiency and scalability with easy integration.
+Introducing the Email Extractor: Upload your messy files and watch it magically fish out email IDs like a pro detective on caffeine! It cleans up the chaos, de-dupes the emails, and gives you a neat, tidy list. Because who needs names when you’ve got email IDs? 🎯
