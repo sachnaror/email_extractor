@@ -15,7 +15,8 @@ jobs:
 
       - name: Set description from DESCRIPTION.md
         run: |
-          DESCRIPTION=$(cat DESCRIPTION.md | head -n 3)  # Take the first 3 lines
+          DESCRIPTION=$(head -n 3 DESCRIPTION.md | tr '\n' ' ')  # Take the first 3 lines as a single line
+          echo "Updating repository description to: '$DESCRIPTION'"
           curl -X PATCH \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -d "{\"description\": \"$DESCRIPTION\"}" \
