@@ -19,4 +19,4 @@ jobs:
           curl -X PATCH \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -d "{\"description\": \"$DESCRIPTION\"}" \
-            https://api.github.com/repos/${{ github.repository }}
+            https://api.github.com/repos/sachnaror/email_extractor
